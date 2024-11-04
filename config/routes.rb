@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   #controller name should match the table i'm pulling from; Index is conventional name for an action that just displays a list of records from a table
   get("/directors", { :controller => "directors", :action => "index" })
+  #controller name should match the table i'm pulling from; Show is conventional name for an action that displays the details of a record from a table
+  get("/directors/:the_id", { :controller => "directors", :action => "show" })
 
   get("/movies", { :controller => "movies", :action => "index" })
 
